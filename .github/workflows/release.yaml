@@ -22,7 +22,7 @@ jobs:
         name: Get repo name as ENV var
         run: |
           echo "repo_name=${{ github.event.repository.name }}" >> $GITHUB_OUTPUT
-          echo "author=$(curl -sSL ${{ github.event.repository.owner.url }} | jq -r '.name')"" >> $GITHUB_OUTPUT
+          echo "author=$(curl -sSL ${{ github.event.repository.owner.url }} | jq -r '.name')" >> $GITHUB_OUTPUT
 
     outputs:
       repo_name: ${{ steps.envs.outputs.repo_name }}
