@@ -1,0 +1,14 @@
+name: Trying out things
+
+on:
+  workflow_dispatch:
+
+jobs:
+  maven-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Dump github context
+        run: echo "$GITHUB_CONTEXT"
+        shell: bash
+        env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}

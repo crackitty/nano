@@ -1,0 +1,8 @@
+/.apt_generated/
+/target
+.git
+.settings
+.settings
+.vscode
+.project
+.java-version
