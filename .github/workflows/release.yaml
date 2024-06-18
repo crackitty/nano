@@ -91,7 +91,8 @@ jobs:
           tags: |
             type=schedule
             type=ref,event=branch
-            type=semver,pattern={{ version }}
+            type=semver,pattern={{major}}.{{minor}}.{{patch}}
+            type=semver,pattern={{major}}
             type=raw,value=latest,enable={{is_default_branch}}
             type=sha,format=long
 
