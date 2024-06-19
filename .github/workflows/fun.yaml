@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  maven-build:
+  experiment:
     runs-on: ubuntu-latest
     steps:
       - name: Dump github context
