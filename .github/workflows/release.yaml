@@ -4,6 +4,12 @@ name: Release pipeline
 
 on:
   push:
+    branches:
+      - "master"
+    paths-ignore:
+      - "README.md"
+      - ".github/workflows/pre-release.yaml"
+      - ".github/workflows/fun.yaml"
     tags:
       - "v*"
 
