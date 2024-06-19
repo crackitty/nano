@@ -12,13 +12,3 @@ jobs:
         shell: bash
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
-
-      - id: yo
-        uses: actions/hello-world@v1
-        with:
-          who-to-greet: "Charlie"
-
-      - run: echo random-number "$RANDOM_NUMBER"
-        shell: bash
-        env:
-          RANDOM_NUMBER: ${{ steps.yo.outputs.random-number }}
