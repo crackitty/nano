@@ -4,11 +4,8 @@ name: Release pipeline
 
 on:
   push:
-    branches:
-      - "*"
     tags:
       - "v*"
-  workflow_dispatch:
 
 env:
   IMAGE_REGISTRY: ghcr.io
@@ -43,7 +40,7 @@ jobs:
         with:
           java-version: "21"
           distribution: "temurin"
-          cache: maven
+          cache: "maven"
 
       - name: Maven Build
         run: ./mvnw test package
